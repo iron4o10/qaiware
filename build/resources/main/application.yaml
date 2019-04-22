@@ -1,0 +1,10 @@
+spring.application.name: ${APPLICATION_NAME:simple-aws-aurora-app}
+server.port: ${APPLICATION_PORT:9000}
+
+spring:
+  datasource.url: ${DATASOURCE_URL:jdbc:mysql://auroratest.cfuh5hrzspo6.eu-central-1.rds.amazonaws.com:3306/simple_aws_aurora_schema?useSSL=false}
+  datasource.username: ${DATASOURCE_USERNAME:admin}
+  datasource.password: ${DATASOURCE_PASSWORD:hS34%68rt}
+  datasource.driver-class-name: ${DATASOURCE_DRIVER_NAME:com.mysql.jdbc.Driver}
+  jpa.properties.hibernate.dialect: ${DATASOURCE_DIALECT:org.hibernate.dialect.MySQL57Dialect}
+  jpa.hibernate.ddl-auto: ${DATASOURCE_DDL_AUTO:update}

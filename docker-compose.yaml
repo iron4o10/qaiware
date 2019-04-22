@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  #  mysql:
+  #    image: mysql:5.7
+  #    container_name: mysql
+  #    environment:
+  #      MYSQL_DATABASE: "simple_aws_aurora_schema"
+  #      MYSQL_ROOT_PASSWORD: "hS34%68rt"
+  #    ports:
+  #    - "3306:3306"
+
+  simple-aws-aurora-app:
+    #    depends_on:
+    #    - mysql
+    build:
+      context: .
+    image: simple-aws-aurora-app:1.0.0-SNAPSHOT
+    container_name: aws-app
+    environment:
+      DATASOURCE_URL: "jdbc:mysql://auroratest.cfuh5hrzspo6.eu-central-1.rds.amazonaws.com:3306/simple_aws_aurora_schema?useSSL=false"
+      DATASOURCE_USERNAME: "admin"
+      DATASOURCE_PASSWORD: "hS34%68rt"
+      DATASOURCE_DRIVER_NAME: "com.mysql.jdbc.Driver"
+      DATASOURCE_DIALECT: "org.hibernate.dialect.MySQL57Dialect"
+      DATASOURCE_DDL_AUTO: "update"
+    ports:
+    - "9000:9000"

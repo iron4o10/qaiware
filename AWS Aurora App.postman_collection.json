@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "b41ab18f-0795-4ae7-bdb3-9257bcfa6bd0",
+		"name": "AWS Aurora App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9000/users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"testuser1\",\n\t\"email\": \"testuser1@aws.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/users/9ca3a2c5-f391-42d9-b70f-b0530f8592b1",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"testuser1-updated\",\n\t\"email\": \"testuser1@aws.com-updated\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9000/users/9ca3a2c5-f391-42d9-b70f-b0530f8592b1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"9ca3a2c5-f391-42d9-b70f-b0530f8592b1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/users/335e332c-45d9-4601-acb0-9fbc53d8e8a6",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9000/users/335e332c-45d9-4601-acb0-9fbc53d8e8a6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"335e332c-45d9-4601-acb0-9fbc53d8e8a6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/users/335e332c-45d9-4601-acb0-9fbc53d8e8a6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9000/users/335e332c-45d9-4601-acb0-9fbc53d8e8a6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"335e332c-45d9-4601-acb0-9fbc53d8e8a6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9000/actuator/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9000/actuator/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
